@@ -106,7 +106,7 @@ export const oauthHandler = {
         maxAge: 7 * 24 * 60 * 60, // 1 week
       });
 
-      return c.redirect(`${process.env.FRONTEND_URL}/dashboard`);
+      return c.redirect(`/`);
     } catch (error) {
       console.error("OAuth error:", error);
       return c.json({ error: "OAuth authentication failed" }, 500);

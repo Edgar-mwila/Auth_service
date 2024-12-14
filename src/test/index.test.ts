@@ -3,7 +3,7 @@ import app from "../app";
 
 describe("App Routes", () => {
   test("should have auth routes", async () => {
-    const req = new Request("http://localhost/api/auth/login", {
+    const req = new Request("http://localhost:3000/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -23,7 +23,7 @@ describe("App Routes", () => {
   });
 
   test("should handle invalid login credentials in auth routes", async () => {
-    const req = new Request("http://localhost/api/auth/login", {
+    const req = new Request("http://localhost:3000/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -42,7 +42,7 @@ describe("App Routes", () => {
   });
 
   test("should have oauth routes", async () => {
-    const req = new Request("http://localhost/api/oauth/providers");
+    const req = new Request("http://localhost:3000/oauth/providers");
 
     const res = await app.fetch(req);
     
@@ -53,7 +53,7 @@ describe("App Routes", () => {
   });
 
   test("should have user routes", async () => {
-    const req = new Request("http://localhost/api/user/profile", {
+    const req = new Request("http://localhost:3000/user/profile", {
       headers: {
         "Authorization": "Bearer valid_token"
       }
@@ -68,7 +68,7 @@ describe("App Routes", () => {
   });
 
   test("should handle unauthorized access to user routes", async () => {
-    const req = new Request("http://localhost/api/user/profile");
+    const req = new Request("http://localhost:3000/user/profile");
 
     const res = await app.fetch(req);
     
