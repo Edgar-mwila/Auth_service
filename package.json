@@ -1,0 +1,22 @@
+{
+  "name": "auth",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "scripts": {
+    "dev": "bun src/index.ts --watch"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "supertest": "^7.0.0"
+  }
+}
