@@ -1,6 +1,6 @@
 import type { Context } from "hono";
 import { db } from "../db";
-import { users } from "../db/schema/user";
+import { users } from "../db/schema/users";
 import { hashPassword, comparePassword } from "../utils/password";
 import { generateToken, verifyToken } from "../utils/token";
 import { eq, or } from "drizzle-orm";

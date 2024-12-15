@@ -1,7 +1,7 @@
 // src/handlers/userHandler.ts
 import type { Context } from "hono";
 import { db } from "../db";
-import { users } from "../db/schema/user";
+import { users } from "../db/schema/users";
 import { eq } from "drizzle-orm";
 
 export const userHandler = {

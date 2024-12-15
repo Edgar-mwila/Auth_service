@@ -1,4 +1,4 @@
-// src/db/schema/user.ts
+// src/db/schema/users.ts
 import { pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
 
 export const users = pgTable("users", {
